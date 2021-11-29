@@ -27,10 +27,12 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//@Composable
-//fun Greeting(name: String) {
-//    Text(text = "Hello $name!")
-//}
+@Composable
+private fun MyApp() {
+    Surface(color = MaterialTheme.colors.background) {
+        Greeting("Android")
+    }
+}
 
 @Composable
 private fun Greeting(name: String) {
@@ -39,19 +41,10 @@ private fun Greeting(name: String) {
     }
 }
 
-
-//@Preview(showBackground = true)
-//@Composable
-//fun DefaultPreview() {
-//    BasicCodelabTheme {
-//        Greeting("Android")
-//    }
-//}
-
-@Preview(showBackground = true, name = "Text preview")
+@Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+private fun DefaultPreview() {
     BasicCodelabTheme {
-        Greeting(name = "Android")
+        MyApp()
     }
 }
